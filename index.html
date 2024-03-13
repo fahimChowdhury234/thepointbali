@@ -19,7 +19,8 @@
          crossorigin="anonymous"
       />
       <!--====== fancybox css ======-->
-      <link rel="stylesheet" href="./assets/fancybox.css" />
+      <!-- <link rel="stylesheet" href="./assets/fancybox.css" /> -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
       <!-- date piker -->
       <link href="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.css" rel="stylesheet" type="text/css" />
       <!--  coustom css -->
@@ -71,24 +72,18 @@
                   </ul>
                </div>
             </nav>
+
             <nav class="navbar flex-column navbar-expand-xl bg-transparent text-brand container">
                <a class="navbar-brand text-brand" href="./index.html">
                   <img src="./assets/img/logo.png" alt="" />
                </a>
-               <button
-                  class="navbar-toggler bg-transparent text-black px-3 py-2"
-                  type="button"
-                  data-bs-toggle="offcanvas"
-                  data-bs-target="#navbarOffcanvas"
-                  aria-controls="navbarOffcanvas"
-                  aria-expanded="false"
-                  aria-label="Toggle navigation"
-               >
+               <button class="navbar-toggler bg-transparent text-black px-3 py-2" type="button" id="OpenMenu">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="30px" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                      <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                   </svg>
                </button>
-               <div class="offcanvas offcanvas-end" id="navbarOffcanvas" tabindex="-1" aria-labelledby="offcanvasNavbarLabel">
+
+               <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
                   <div class="offcanvas-header">
                      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                   </div>
@@ -96,25 +91,25 @@
                      <div class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         <ul class="navbar-nav navbar-nav-links mb-2 mb-lg-0 text-uppercase">
                            <li class="nav-item">
-                              <a class="nav-link active" href="./index.html" target="_self" title="">Home</a>
+                              <a class="nav-link active" type="button" href="./index.html" target="_self" title="">Home</a>
                            </li>
                            <li class="nav-item">
-                              <a class="nav-link" href="#services" target="_self" title="">Services</a>
+                              <a class="nav-link" type="button" href="#services" title="">Services</a>
                            </li>
                            <li class="nav-item">
-                              <a class="nav-link" href="#rooms" target="_self" title="">Rooms</a>
+                              <a class="nav-link" type="button" href="#rooms" title="">Rooms</a>
                            </li>
                            <li class="nav-item">
-                              <a class="nav-link" href="#gallery" target="_self" title=""> GALLERY</a>
+                              <a class="nav-link" type="button" href="#gallery" title=""> GALLERY</a>
                            </li>
                            <li class="nav-item">
-                              <a class="nav-link" href="#testimonials" target="_self" title="">TESTIMONIALS</a>
+                              <a class="nav-link" type="button" href="#testimonials" title="">TESTIMONIALS</a>
                            </li>
                            <li class="nav-item">
-                              <a class="nav-link" href="#book" target="_self" title="">BOOK NOW</a>
+                              <a class="nav-link" type="button" href="#book" title="">BOOK NOW</a>
                            </li>
                            <li class="nav-item">
-                              <a class="nav-link" href="#contact" target="_self" title="">Contact</a>
+                              <a class="nav-link" type="button" href="#contact" title="">Contact</a>
                            </li>
                         </ul>
                      </div>
@@ -132,13 +127,13 @@
                      <h3>Private boutique villas set on the stunning headland of Nusa Lembongan island</h3>
                      <div class="hero-content-bt d-flex align-items-center gap-4">
                         <h2>Book direct for the best rates</h2>
-                        <a href="#"> Book Now <i class="fa fa-hand-pointer-o"></i></a>
+                        <a href="#book"> Book Now <i class="fa fa-hand-pointer-o"></i></a>
                      </div>
                   </div>
                </div>
             </div>
             <div class="scroll-count">
-               <a href="#!next" class="wv-link-elm"><span class="icon-scroll"></span></a>
+               <a href="#next" class="wv-link-elm"><span class="icon-scroll"></span></a>
             </div>
             <div id="carouselExampleSlidesOnly" class="carousel slide h-100 position-absolute hero-carousel" data-bs-ride="carousel">
                <div class="carousel-inner h-100">
@@ -155,6 +150,117 @@
             </div>
          </header>
          <!-- header & hero section end -->
+         <!-- spot details section start-->
+         <section class="spot-details-section section" id="next">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-4">
+                     <div class="spot-details-box">
+                        <div class="spot-details-imgs">
+                           <div id="spot-details-a" class="carousel slide" data-bs-ride="carousel">
+                              <div class="carousel-inner">
+                                 <div class="carousel-item active">
+                                    <img src="./assets/img/highlight-1-a.jpg" class="d-block w-100" alt="..." />
+                                 </div>
+                                 <div class="carousel-item">
+                                    <img src="./assets/img/highlight-1-b.jpg" class="d-block w-100" alt="..." />
+                                 </div>
+                              </div>
+                              <button class="carousel-control-prev" type="button" data-bs-target="#spot-details-a" data-bs-slide="prev">
+                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                 <span class="visually-hidden">Previous</span>
+                              </button>
+                              <button class="carousel-control-next" type="button" data-bs-target="#spot-details-a" data-bs-slide="next">
+                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                 <span class="visually-hidden">Next</span>
+                              </button>
+                           </div>
+                        </div>
+                        <div class="spot-details-content">
+                           <h4>The experience</h4>
+                           <p>Experience the best view on the island with amazing ocean, mountain and sunset views available from all rooms</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-4">
+                     <div class="spot-details-box">
+                        <div class="spot-details-imgs">
+                           <div id="spot-details-b" class="carousel slide" data-bs-ride="carousel">
+                              <div class="carousel-inner">
+                                 <div class="carousel-item active">
+                                    <img src="./assets/img/highlight-2-a.jpg" class="d-block w-100" alt="..." />
+                                 </div>
+                                 <div class="carousel-item">
+                                    <img src="./assets/img/highlight-2-b.jpg" class="d-block w-100" alt="..." />
+                                 </div>
+                              </div>
+                              <button class="carousel-control-prev" type="button" data-bs-target="#spot-details-b" data-bs-slide="prev">
+                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                 <span class="visually-hidden">Previous</span>
+                              </button>
+                              <button class="carousel-control-next" type="button" data-bs-target="#spot-details-b" data-bs-slide="next">
+                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                 <span class="visually-hidden">Next</span>
+                              </button>
+                           </div>
+                        </div>
+                        <div class="spot-details-content">
+                           <h4>The point</h4>
+                           <p>Relax by the infinity pool and enjoy the stunning scenery whilst our friendly staff take care of you</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-4">
+                     <div class="spot-details-box">
+                        <div class="spot-details-imgs">
+                           <div id="spot-details-c" class="carousel slide" data-bs-ride="carousel">
+                              <div class="carousel-inner">
+                                 <div class="carousel-item active">
+                                    <img src="./assets/img/highlight-3-a.jpg" class="d-block w-100" alt="..." />
+                                 </div>
+                                 <div class="carousel-item">
+                                    <img src="./assets/img/highlight-3-b.jpg" class="d-block w-100" alt="..." />
+                                 </div>
+                              </div>
+                              <button class="carousel-control-prev" type="button" data-bs-target="#spot-details-c" data-bs-slide="prev">
+                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                 <span class="visually-hidden">Previous</span>
+                              </button>
+                              <button class="carousel-control-next" type="button" data-bs-target="#spot-details-c" data-bs-slide="next">
+                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                 <span class="visually-hidden">Next</span>
+                              </button>
+                           </div>
+                        </div>
+                        <div class="spot-details-content">
+                           <h4>The island</h4>
+                           <p>Located a short walk to Mushroom Beach, Devils Tears viewing platform, watersports and wonderful island life-style.</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- spot details section end-->
+         <!-- About Section start -->
+         <section class="about-section section">
+            <div class="row h-100 align-items-center">
+               <div class="col-md-6 about-col">
+                  <div class="about-content">
+                     <h3>About the point</h3>
+                     <p>
+                        Welcome to The Point, boasting an exclusive cliff top location with uninterrupted sunset and ocean views, looking out to the glittering coastline of Bali and the majestic Mount
+                        Agung. <br />
+                        <br />
+                        The Point was designed to provide a private getaway for couples or groups of up to 8 looking for a truly relaxing stay. All four large suites are fully appointed with an
+                        infinity pool to maximise the views, lounge bar, in-house dining and friendly staff.
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- About Section end -->
+
          <!-- Services section start -->
          <section class="services-section section" id="services">
             <div class="container">
@@ -295,117 +401,6 @@
          </section>
 
          <!-- Services section end -->
-         <!-- About Section start -->
-         <section class="about-section section">
-            <div class="row h-100 align-items-center">
-               <div class="col-md-6 about-col">
-                  <div class="about-content">
-                     <h3>About the point</h3>
-                     <p>
-                        Welcome to The Point, boasting an exclusive cliff top location with uninterrupted sunset and ocean views, looking out to the glittering coastline of Bali and the majestic Mount
-                        Agung. <br />
-                        <br />
-                        The Point was designed to provide a private getaway for couples or groups of up to 8 looking for a truly relaxing stay. All four large suites are fully appointed with an
-                        infinity pool to maximise the views, lounge bar, in-house dining and friendly staff.
-                     </p>
-                  </div>
-               </div>
-            </div>
-         </section>
-         <!-- About Section end -->
-
-         <!-- spot details section start-->
-         <section class="spot-details-section section">
-            <div class="container">
-               <div class="row">
-                  <div class="col-md-4">
-                     <div class="spot-details-box">
-                        <div class="spot-details-imgs">
-                           <div id="spot-details-a" class="carousel slide" data-bs-ride="carousel">
-                              <div class="carousel-inner">
-                                 <div class="carousel-item active">
-                                    <img src="./assets/img/highlight-1-a.jpg" class="d-block w-100" alt="..." />
-                                 </div>
-                                 <div class="carousel-item">
-                                    <img src="./assets/img/highlight-1-b.jpg" class="d-block w-100" alt="..." />
-                                 </div>
-                              </div>
-                              <button class="carousel-control-prev" type="button" data-bs-target="#spot-details-a" data-bs-slide="prev">
-                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                 <span class="visually-hidden">Previous</span>
-                              </button>
-                              <button class="carousel-control-next" type="button" data-bs-target="#spot-details-a" data-bs-slide="next">
-                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                 <span class="visually-hidden">Next</span>
-                              </button>
-                           </div>
-                        </div>
-                        <div class="spot-details-content">
-                           <h4>The experience</h4>
-                           <p>Experience the best view on the island with amazing ocean, mountain and sunset views available from all rooms</p>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-md-4">
-                     <div class="spot-details-box">
-                        <div class="spot-details-imgs">
-                           <div id="spot-details-b" class="carousel slide" data-bs-ride="carousel">
-                              <div class="carousel-inner">
-                                 <div class="carousel-item active">
-                                    <img src="./assets/img/highlight-2-a.jpg" class="d-block w-100" alt="..." />
-                                 </div>
-                                 <div class="carousel-item">
-                                    <img src="./assets/img/highlight-2-b.jpg" class="d-block w-100" alt="..." />
-                                 </div>
-                              </div>
-                              <button class="carousel-control-prev" type="button" data-bs-target="#spot-details-b" data-bs-slide="prev">
-                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                 <span class="visually-hidden">Previous</span>
-                              </button>
-                              <button class="carousel-control-next" type="button" data-bs-target="#spot-details-b" data-bs-slide="next">
-                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                 <span class="visually-hidden">Next</span>
-                              </button>
-                           </div>
-                        </div>
-                        <div class="spot-details-content">
-                           <h4>The point</h4>
-                           <p>Relax by the infinity pool and enjoy the stunning scenery whilst our friendly staff take care of you</p>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-md-4">
-                     <div class="spot-details-box">
-                        <div class="spot-details-imgs">
-                           <div id="spot-details-c" class="carousel slide" data-bs-ride="carousel">
-                              <div class="carousel-inner">
-                                 <div class="carousel-item active">
-                                    <img src="./assets/img/highlight-3-a.jpg" class="d-block w-100" alt="..." />
-                                 </div>
-                                 <div class="carousel-item">
-                                    <img src="./assets/img/highlight-3-b.jpg" class="d-block w-100" alt="..." />
-                                 </div>
-                              </div>
-                              <button class="carousel-control-prev" type="button" data-bs-target="#spot-details-c" data-bs-slide="prev">
-                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                 <span class="visually-hidden">Previous</span>
-                              </button>
-                              <button class="carousel-control-next" type="button" data-bs-target="#spot-details-c" data-bs-slide="next">
-                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                 <span class="visually-hidden">Next</span>
-                              </button>
-                           </div>
-                        </div>
-                        <div class="spot-details-content">
-                           <h4>The island</h4>
-                           <p>Located a short walk to Mushroom Beach, Devils Tears viewing platform, watersports and wonderful island life-style.</p>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </section>
-         <!-- spot details section end-->
 
          <!--rooms section start-->
          <section class="rooms-santion section" id="rooms">
@@ -471,7 +466,7 @@
                            </a>
                         </div>
                         <div class="room-details-book">
-                           <a href="#">Book Now</a>
+                           <a href="#book">Book Now</a>
                         </div>
                      </div>
                   </div>
@@ -505,7 +500,7 @@
                            </a>
                         </div>
                         <div class="room-details-book">
-                           <a href="#">Book Now</a>
+                           <a href="#book">Book Now</a>
                         </div>
                      </div>
                   </div>
@@ -539,7 +534,7 @@
                            </a>
                         </div>
                         <div class="room-details-book">
-                           <a href="#">Book Now</a>
+                           <a href="#book">Book Now</a>
                         </div>
                      </div>
                   </div>
@@ -556,19 +551,19 @@
                   <img src="./assets/img/logo_icon.png" alt="" />
                </div>
                <div class="row gallery-row">
-                  <a href="./assets/img/villa-08.jpg" data-fancybox="gallery" class="col-md-3">
+                  <a href="./assets/img/villa-08.jpg" data-fancybox="gallery" class="fancybox col-md-3">
                      <img src="./assets/img/villa-08.jpg" alt="" />
                   </a>
-                  <a href="./assets/img/villa-09.jpg" data-fancybox="gallery" class="col-md-3">
+                  <a href="./assets/img/villa-09.jpg" data-fancybox="gallery" class="fancybox col-md-3">
                      <img src="./assets/img/villa-09.jpg" alt="" />
                   </a>
-                  <a href="./assets/img/villa-10.jpg" data-fancybox="gallery" class="col-md-3">
+                  <a href="./assets/img/villa-10.jpg" data-fancybox="gallery" class="fancybox col-md-3">
                      <img src="./assets/img/villa-10.jpg" alt="" />
                   </a>
-                  <a href="./assets/img/villa-11.jpg" data-fancybox="gallery" class="col-md-3">
+                  <a href="./assets/img/villa-11.jpg" data-fancybox="gallery" class="fancybox col-md-3">
                      <img src="./assets/img/villa-11.jpg" alt="" />
                   </a>
-                  <a href="./assets/img/villa-12.jpg" data-fancybox="gallery" class="col-md-3">
+                  <a href="./assets/img/villa-12.jpg" data-fancybox="gallery" class="fancybox col-md-3">
                      <img src="./assets/img/villa-12.jpg" alt="" />
                   </a>
 
@@ -810,68 +805,80 @@
                   <img src="./assets/img/logo_icon_white.png" alt="" />
                </div>
 
-               <form action="#" class="book-room-form">
+               <form action="#" class="book-room-form" id="book-room-form">
                   <div class="row book-room-row">
                      <div class="col-md-6">
-                        <input type="text" required name="firstName" id="" placeholder="First Name" />
+                        <input type="text" name="firstName" id="firstName" placeholder="First Name" />
+                        <p id="nameError" class="error-massage"></p>
                      </div>
                      <div class="col-md-6">
-                        <input type="text" required name="LastName" id="" placeholder="Last Name" />
+                        <input type="text" name="lastName" id="lastName" placeholder="Last Name" />
+                        <p id="lastNameError" class="error-massage"></p>
                      </div>
                      <div class="col-md-6">
-                        <input type="text" required name="phone" id="" placeholder="Phone" />
+                        <input type="text" name="phone" id="phone" placeholder="Phone" />
+                        <p id="phoneError" class="error-massage"></p>
                      </div>
                      <div class="col-md-6">
-                        <input type="email" required name="email" id="" placeholder="Email" />
+                        <input type="email" name="email" id="email" placeholder="Email" />
+                        <p id="emailError" class="error-massage"></p>
                      </div>
 
                      <div class="col-md-6">
-                        <div class="ui calendar w-100" id="date">
+                        <div class="ui calendar w-100" id="checkIn">
                            <div class="ui input left icon w-100">
                               <i class="calendar icon"></i>
-                              <input type="text" required placeholder="Check In" class="" />
+                              <input type="text" placeholder="Check In" id="check-in" />
                            </div>
                         </div>
+                        <p id="checkInError" class="error-massage"></p>
                      </div>
                      <div class="col-md-6">
-                        <div class="ui calendar w-100" id="date">
+                        <div class="ui calendar w-100" id="checkOut">
                            <div class="ui input left icon w-100">
                               <i class="calendar icon"></i>
-                              <input type="text" required placeholder="Check out" class="" />
+                              <input type="text" placeholder="Check out" id="check-out" />
                            </div>
                         </div>
+                        <p id="checkOutError" class="error-massage"></p>
                      </div>
                      <div class="col-md-6">
-                        <input type="text" name="adult" required id="" placeholder="Number of adult" />
+                        <input type="text" name="adult" id="adult" placeholder="Number of adult" />
+                        <p id="adultError" class="error-massage"></p>
                      </div>
                      <div class="col-md-6">
-                        <input type="text" name="children" required id="" placeholder="Number of children" />
+                        <input type="text" name="children" id="children" placeholder="Number of children" />
+                        <p id="childrenError" class="error-massage"></p>
                      </div>
                      <div class="col-md-12">
-                        <select required>
+                        <select id="chooseRoom">
                            <option value="" selected="selected">Choose a room:</option>
 
                            <option>King Suite</option>
                            <option>Twin / Double Suite</option>
                            <option>Entire Villa</option>
                         </select>
+                        <p id="chooseRoomError" class="error-massage"></p>
                      </div>
                      <div class="col-md-12">
-                        <textarea name="" id="" cols="30" rows="6" placeholder="Important information"></textarea>
+                        <textarea name="information" id="information" cols="30" rows="6" placeholder="Important information"></textarea>
+                        <p id="informationError" class="error-massage"></p>
                      </div>
                      <div class="col-md-12">
                         <div class="d-flex align-items-center gap-2">
-                           <input type="checkbox" value="" id="" class="w-auto" id="flexCheckDefault" />
+                           <input type="checkbox" value="" class="w-auto" id="flexCheckDefault" />
                            <label for="flexCheckDefault" class="chakbox-lable"> I have read and understand the privacy policy. </label>
                         </div>
+                        <p id="privacyPolicyError" class="error-massage"></p>
                      </div>
                      <div class="col-md-12">
                         <div class="row">
-                           <div class="col-md-6">
+                           <!-- <div class="col-md-6">
                               <div class="capcha-box d-flex align-items-center gap-3">
-                                 <img src="./assets/img/download.png" alt="" />
+                                 
+                                 <div id="captcha"></div>
                                  <input type="text" placeholder="Capcha" class="w-auto" />
-                                 <button>
+                                 <button id="generateButton">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
                                        <path
                                           fill-rule="evenodd"
@@ -881,9 +888,9 @@
                                     </svg>
                                  </button>
                               </div>
-                           </div>
+                           </div> -->
                            <div class="col-md-6">
-                              <button class="book-form-btn">Send a request</button>
+                              <button class="book-form-btn" id="submitBtn">Send a request</button>
                            </div>
                         </div>
                      </div>
@@ -891,12 +898,12 @@
                         <div class="book-room-terms">
                            <h3>Terms and conditions</h3>
                            <ul>
-                              <li>Prices are in Indonesian Rupiah (IDR)</li>
+                              <li>Prices are in Australian Dollar (AUD)</li>
                               <li>Accommodation prices inclusive of tax and service charges.</li>
-                              <li>A deposit of 1 night is required to secure the booking.</li>
+                              <li>A deposit of 1 night is to secure the booking.</li>
                               <li>An email will be sent to confirm the booking and provide details for payment.</li>
-                              <li>Full payment of accommodation is required seven (7) days before arrival.</li>
-                              <li>48 hours notice will be required to organise transfers / transport to the Island.</li>
+                              <li>Full payment of accommodation is seven (7) days before arrival.</li>
+                              <li>48 hours notice will be to organise transfers / transport to the Island.</li>
                            </ul>
                         </div>
                      </div>
@@ -1016,9 +1023,9 @@
          crossorigin="anonymous"
       ></script>
       <!--======  jquery js ======-->
-      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-      <!--======  fancybox js ====== -->
-      <script src="./assets/fancybox.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <!-- Include Fancybox JS -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
       <!-- date picker -->
       <script src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js"></script>
 
@@ -1033,9 +1040,216 @@
                }
             });
          }
-         $("#date").calendar({
+         $("#checkIn").calendar({
             type: "date",
          });
+         $("#checkOut").calendar({
+            type: "date",
+         });
+
+         // Add event listeners to each navigation link
+         document.querySelectorAll(".navbar-nav-links .nav-link").forEach((link) => {
+            link.addEventListener("click", function (event) {
+               // Get the target section's ID from the href attribute of the clicked link
+               const targetId = this.getAttribute("href").substring(1);
+               const targetSection = document.getElementById(targetId);
+
+               // Check if the target section exists
+               if (targetSection) {
+                  event.preventDefault(); // Prevent the default link behavior
+                  event.stopPropagation();
+                  // Scroll to the target section with a smooth animation
+                  targetSection.scrollIntoView({
+                     behavior: "smooth",
+                  });
+
+                  // Close the offcanvas menu
+                  const offcanvas = document.querySelector(".offcanvas");
+                  const offcanvasInstance = bootstrap.Offcanvas.getInstance(offcanvas);
+                  offcanvasInstance.hide();
+               }
+            });
+         });
+         document.addEventListener("DOMContentLoaded", function () {
+            var myOffcanvas = document.getElementById("offcanvasExample");
+            var bsOffcanvas = new bootstrap.Offcanvas(myOffcanvas);
+            document.getElementById("OpenMenu").addEventListener("click", function (e) {
+               e.preventDefault();
+               e.stopPropagation();
+               bsOffcanvas.toggle();
+            });
+         });
+
+         document.getElementById("submitBtn").addEventListener("click", function (e) {
+            // Retrieve form data
+            e.preventDefault();
+
+            const firstName = document.getElementById("firstName").value;
+            const lastName = document.getElementById("lastName").value;
+            const email = document.getElementById("email").value;
+            const phone = document.getElementById("phone").value;
+            const checkIn = document.getElementById("check-in").value;
+            const checkOut = document.getElementById("check-out").value;
+            const adult = document.getElementById("adult").value;
+            const children = document.getElementById("children").value;
+            const chooseRoom = document.getElementById("chooseRoom").value;
+            const information = document.getElementById("information").value;
+            const privacyPolicyChecked = document.getElementById("flexCheckDefault");
+
+            // Get references to error message elements
+            var nameError = document.getElementById("nameError");
+            var lastNameError = document.getElementById("lastNameError");
+            var emailError = document.getElementById("emailError");
+            var phoneError = document.getElementById("phoneError");
+            var checkInError = document.getElementById("checkInError");
+            var checkOutError = document.getElementById("checkOutError");
+            var adultError = document.getElementById("adultError");
+            var childrenError = document.getElementById("childrenError");
+            var chooseRoomError = document.getElementById("chooseRoomError");
+            var informationError = document.getElementById("informationError");
+            var privacyPolicyError = document.getElementById("privacyPolicyError");
+
+            // Clear previous error messages and reset border colors
+            nameError.textContent = "";
+            lastNameError.textContent = "";
+            emailError.textContent = "";
+            phoneError.textContent = "";
+            checkInError.textContent = "";
+            checkOutError.textContent = "";
+            adultError.textContent = "";
+            childrenError.textContent = "";
+            chooseRoomError.textContent = "";
+            informationError.textContent = "";
+            privacyPolicyError.textContent = "";
+
+            document.getElementById("firstName").style.borderColor = "";
+            document.getElementById("lastName").style.borderColor = "";
+            document.getElementById("email").style.borderColor = "";
+            document.getElementById("phone").style.borderColor = "";
+            document.getElementById("check-in").style.borderColor = "";
+            document.getElementById("check-out").style.borderColor = "";
+            document.getElementById("adult").style.borderColor = "";
+            document.getElementById("children").style.borderColor = "";
+            document.getElementById("chooseRoom").style.borderColor = "";
+            document.getElementById("information").style.borderColor = "";
+            document.getElementById("flexCheckDefault").style.borderColor = "";
+
+            // Perform validation for each field
+            if (!firstName) {
+               nameError.textContent = "Please enter your first name.";
+               document.getElementById("firstName").style.borderColor = "red";
+               return;
+            }
+            if (!lastName) {
+               lastNameError.textContent = "Please enter your last name.";
+               document.getElementById("lastName").style.borderColor = "red";
+               return;
+            }
+            if (!email) {
+               emailError.textContent = "Please enter your email address.";
+               document.getElementById("email").style.borderColor = "red";
+               return;
+            }
+            if (!isValidEmail(email)) {
+               emailError.textContent = "Invalid email format";
+               document.getElementById("email").style.borderColor = "red";
+               return;
+            }
+            if (!phone) {
+               phoneError.textContent = "Please enter your phone number.";
+               document.getElementById("phone").style.borderColor = "red";
+               return;
+            }
+            if (!checkIn) {
+               checkInError.textContent = "Please select check-in date.";
+               document.getElementById("check-in").style.borderColor = "red";
+               return;
+            }
+            if (!checkOut) {
+               checkOutError.textContent = "Please select check-out date.";
+               document.getElementById("check-out").style.borderColor = "red";
+               return;
+            }
+            if (!adult) {
+               adultError.textContent = "Please enter number of adults.";
+               document.getElementById("adult").style.borderColor = "red";
+               return;
+            }
+            if (!children) {
+               childrenError.textContent = "Please enter number of children.";
+               document.getElementById("children").style.borderColor = "red";
+               return;
+            }
+            if (!chooseRoom) {
+               chooseRoomError.textContent = "Please choose a room.";
+               document.getElementById("chooseRoom").style.borderColor = "red";
+               return;
+            }
+            if (!information) {
+               informationError.textContent = "Please provide important information.";
+               document.getElementById("information").style.borderColor = "red";
+               return;
+            }
+            if (!privacyPolicyChecked.checked) {
+               // If the checkbox is not checked, display an error message
+               privacyPolicyError.textContent = "Please read and accept the privacy policy.";
+               return;
+            }
+            // Show loading status
+            const submitBtn = document.getElementById("submitBtn");
+            submitBtn.textContent = "submitting...";
+            submitBtn.disabled = true;
+
+            // If all fields pass validation, store data in an object
+            var formData = {
+               firstName: firstName,
+               lastName: lastName,
+               email: email,
+               phone: phone,
+               checkIn: checkIn,
+               checkOut: checkOut,
+               adult: adult,
+               children: children,
+               chooseRoom: chooseRoom,
+               information: information,
+               privacyPolicyChecked: privacyPolicyChecked.checked,
+            };
+
+            // Now you can use the 'formData' object for further processing, such as submitting via AJAX
+            console.log(formData);
+
+            // Reset form and button state
+            submitBtn.textContent = "Submit";
+            submitBtn.disabled = false;
+            document.getElementById("book-room-form").reset();
+         });
+         function isValidEmail(email) {
+            // Regular expression to validate email format
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+         }
       </script>
    </body>
 </html>
+<!-- document.getElementById("generateButton").addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent default form submission behavior
+            generateCaptcha();
+         });
+         function generateRandomString(length) {
+            const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            let result = "";
+            for (let i = 0; i < length; i++) {
+               result += characters.charAt(Math.floor(Math.random() * characters.length));
+            }
+            return result;
+         }
+
+         function generateCaptcha(event) {
+            const captchaContainer = document.getElementById("captcha");
+            const captchaText = generateRandomString(6); // Change the length as needed
+
+            // Display the CAPTCHA as text
+            captchaContainer.textContent = captchaText;
+         }
+         // Call the generateCaptcha function when the page loads
+         window.addEventListener("load", generateCaptcha); -->

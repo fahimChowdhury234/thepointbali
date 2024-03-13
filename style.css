@@ -9,6 +9,11 @@ html {
     scroll-behavior: smooth !important;
 }
 
+html,
+body {
+    height: 100% !important;
+}
+
 body {
     overflow-x: hidden;
     scroll-behavior: smooth !important;
@@ -85,7 +90,7 @@ a {
 
 .top-nav-left li a {
     font-size: 16px;
-    color: #444;
+    color: #fff;
     font-weight: 700;
     line-height: 24px;
 }
@@ -205,6 +210,12 @@ a {
     margin: 50px auto;
     height: calc(3rem * 1.75);
     position: relative;
+}
+
+.scroll-count a {
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
 .scroll-count::before {
@@ -597,6 +608,11 @@ textarea {
 
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+    transition: background-color 0s 600000s, color 0s 600000s !important;
+}
+
 .capcha-box button {
     border: none;
     background-color: transparent;
@@ -606,6 +622,10 @@ textarea {
 .capcha-box button svg {
     width: 25px;
     fill: #fff;
+}
+
+.book-room-form {
+    margin-top: 40px;
 }
 
 .book-form-btn {
@@ -635,6 +655,27 @@ textarea {
     color: #fff;
 }
 
+.ui[class*="left icon"].input>input::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #fff;
+}
+
+.ui.input input,
+.ui[class*="left icon"].input>input {
+    color: #fff;
+
+}
+
+.error-massage {
+    margin-top: 5px;
+    color: rgb(169 35 35);
+    font-size: 16px;
+}
+
+select option {
+    background: #302f2f -webkit-linear-gradient(bottom, #302f2f 0%, #302f2f 100%);
+}
+
 .book-room-terms h3 {
     font-size: 16px;
     line-height: 24px;
@@ -653,6 +694,22 @@ textarea {
     line-height: 24px;
     color: #fff;
     font-weight: 300;
+}
+
+.ui[class*="left icon"].input>i.icon {
+    color: #fff;
+}
+
+#captcha {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: fantasy;
+    width: 100px;
+    height: 40px;
 }
 
 /* book-room-section start */
