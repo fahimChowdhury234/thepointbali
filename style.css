@@ -6,11 +6,12 @@
 
 html {
     overflow-x: hidden;
+    scroll-behavior: smooth !important;
 }
 
 body {
     overflow-x: hidden;
-
+    scroll-behavior: smooth !important;
     font-family: "Lato", sans-serif;
 }
 
@@ -27,6 +28,17 @@ a {
 
 .section {
     padding: 60px 0;
+}
+
+.mask {
+    position: absolute;
+    background-position: 50%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    background: linear-gradient(310deg, #292c257c, #262d3b9c);
 }
 
 .section-title {
@@ -276,6 +288,420 @@ a {
 
 /* Services section end */
 
+/* About section start */
+
+.about-section {
+    background-image: url(./assets/img/Sunset.jpg);
+    height: 524px;
+    background-position: center bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 0;
+}
+
+.about-col {
+    background: rgba(83, 90, 94, 0.625);
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.about-content {
+    padding: 10rem 4rem 10rem 4rem;
+}
+
+.about-content h3 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 60px;
+    color: #fff;
+}
+
+.about-content p {
+    font-size: 16px;
+    color: #fff;
+    line-height: 24px;
+}
+
+/* About section end */
+
+/*  spot details section start */
+.spot-details-box {
+    padding: 1rem 1rem 1rem 1rem;
+    background-color: #f3f3f3;
+}
+
+.spot-details-content h4 {
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "Chonburi", serif;
+    color: #444;
+    margin-bottom: 0;
+
+}
+
+.spot-details-content {
+    margin-top: 10px;
+}
+
+.spot-details-content p {
+    font-size: 16px;
+    color: #444;
+    line-height: 24px;
+    margin-bottom: 0;
+
+}
+
+/*  spot details section end */
+
+
+/* rooms section start*/
+.rooms-row {
+    margin-top: 60px;
+}
+
+.room-box {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 270px;
+    position: relative;
+    cursor: pointer;
+    border-radius: 4px;
+
+}
+
+.room-box-one {
+    background-image: url(./assets/img/room-kingsuite-1.jpg);
+}
+
+.room-box-two {
+    background-image: url(./assets/img/room-twin-2.jpg);
+}
+
+.room-box-three {
+    background-image: url(./assets/img/room-complex-2.jpg);
+}
+
+.room-content {
+    position: absolute;
+    bottom: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    background: rgba(83, 90, 94, 0.5);
+    color: #fff;
+    transition: all .3s cubic-bezier(0.16, 0, 0.28, 0.99);
+    border-radius: 0px;
+}
+
+.room-box:hover .room-content {
+    height: 100%;
+    background: rgba(83, 90, 94, 0.8);
+}
+
+.room-content h3 {
+    font-weight: 700;
+    color: #fff;
+    font-size: 24px;
+    line-height: 36px;
+}
+
+.room-details {
+    border: 1px solid #535a5e;
+    padding: 2rem 2rem 2rem 2rem;
+    border-radius: 4px;
+    margin-top: 30px;
+}
+
+.room-details-content h3 {
+    font-weight: 700;
+    color: #444;
+    font-size: 40px;
+    line-height: 60px;
+}
+
+.room-details-content p {
+    font-size: 16px;
+    color: #444;
+    font-weight: 300;
+    line-height: 24px;
+
+}
+
+.room-details-imgs a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+
+}
+
+.room-details-imgs .col-md-2 {
+    margin-bottom: 15px;
+}
+
+#King_Suite,
+#entire_villa,
+#double_suite {
+    display: none;
+}
+
+.room-details-book {
+    margin-top: 25px;
+}
+
+.room-details-book a {
+    display: block;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-style: normal;
+    padding: 1rem 2rem;
+    font-size: 20px;
+    line-height: 1;
+    border: 1px solid #535a5e;
+    text-align: center;
+    transition: all .3s ease-in;
+}
+
+.room-details-book a:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* rooms section end */
+
+
+/* gallery section strat */
+.gallery-row {
+    margin-top: 50px;
+}
+
+.gallery-row a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.gallery-row .col-md-3 {
+    margin-bottom: 20px;
+}
+
+/* gallery section end */
+
+/* testimonials section start */
+.testimonials-row {
+    margin-top: 50px;
+}
+
+.testimonials-box-img img {
+    width: 80%;
+}
+
+.testimonials-box-content {
+    padding: 20px;
+    background-color: #f3f3f3;
+    border-radius: 4px;
+    position: relative;
+    margin-top: 20px;
+    min-height: 480px;
+}
+
+
+
+.testimonials-box-content h2 {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    color: #444;
+    margin-top: 15px;
+}
+
+.testimonials-box-content p {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+    color: #444;
+}
+
+.testimonials-box-content .testimonials-date {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+    color: #444;
+    display: block;
+    margin-top: 15px;
+}
+
+.testimonials-box-content .quote {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.testimonials-box-star {
+    display: flex;
+    gap: 3px;
+    align-items: center;
+
+}
+
+/* testimonials section end */
+
+/* book-room-section start */
+.book-room-section {
+    background-image: url(./assets/img/header-home3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.book-room-form input,
+select,
+textarea {
+    background-color: transparent !important;
+    padding: 10px;
+    background: transparent;
+    border-bottom: 1px solid #fff !important;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    color: #fff;
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+.book-room-row .col-md-6,
+.book-room-row .col-md-12 {
+    margin-bottom: 15px;
+}
+
+.chakbox-lable {
+    color: #fff;
+}
+
+.ui[class*="left icon"].input>input {
+    border: none !important;
+    border-bottom: 1px solid #fff !important;
+    border-radius: 0 !important;
+
+}
+
+.capcha-box button {
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+
+.capcha-box button svg {
+    width: 25px;
+    fill: #fff;
+}
+
+.book-form-btn {
+    display: block;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-style: normal;
+    padding: 12px 2rem;
+    border-radius: 4px;
+    font-size: 20px;
+    line-height: 1;
+    border: 1px solid #535a5e;
+    text-align: center;
+    transition: all .3s ease-in;
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.book-form-btn:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #fff;
+}
+
+.book-room-terms h3 {
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+    font-family: "Chonburi", serif;
+
+}
+
+.book-room-terms ul {
+    list-style: disc !important;
+}
+
+.book-room-terms ul li,
+.book-room-terms p {
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+    font-weight: 300;
+}
+
+/* book-room-section start */
+
+/* contact section start */
+.contact-section .row .col-md-12 {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-box {
+    padding: 2rem 2rem 2rem 2rem;
+    border: 1px solid #535a5e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.contact-box-icon svg {
+    display: block;
+    fill: #535a5e;
+    height: 2.5rem;
+    width: 2.5rem;
+    line-height: 2.5rem;
+}
+
+.contact-box-content h3 {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 56px;
+    color: #444;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.contact-box-content p {
+    font-size: 16px;
+    font-weight: 300;
+    color: #444;
+    line-height: 24px;
+    text-align: center;
+
+}
+
+/* contact section end */
+
 
 
 @media only screen and (max-width: 768px) and (min-width: 300px) {
@@ -310,4 +736,37 @@ a {
     .hero-content-bt {
         flex-direction: column;
     }
+
+    .services-contnet,
+    .about-content {
+        padding: 40px 20px;
+    }
+
+    .spot-details-section .row .col-md-4,
+    .testimonials-row .col-md-4,
+    .contact-section .row .col-md-4 {
+        margin-bottom: 15px;
+    }
+
+    .rooms-row .col-md-4 {
+        margin-bottom: 15px;
+    }
+
+    .room-details-imgs .col-md-2,
+    .gallery-row .col-md-3 {
+        width: 50%;
+    }
+
+    .section {
+        padding: 30px 0;
+    }
+
+    .testimonials-box-img img {
+        width: 50%;
+    }
+
+    .offcanvas-end {
+        width: 100%;
+    }
+
 }
