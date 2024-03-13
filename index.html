@@ -1155,11 +1155,7 @@
                document.getElementById("email").style.borderColor = "red";
                return;
             }
-            if (!phone) {
-               phoneError.textContent = "Please enter your phone number.";
-               document.getElementById("phone").style.borderColor = "red";
-               return;
-            }
+
             if (!checkIn) {
                checkInError.textContent = "Please select check-in date.";
                document.getElementById("check-in").style.borderColor = "red";
@@ -1170,31 +1166,13 @@
                document.getElementById("check-out").style.borderColor = "red";
                return;
             }
-            if (!adult) {
-               adultError.textContent = "Please enter number of adults.";
-               document.getElementById("adult").style.borderColor = "red";
-               return;
-            }
-            if (!children) {
-               childrenError.textContent = "Please enter number of children.";
-               document.getElementById("children").style.borderColor = "red";
-               return;
-            }
+
             if (!chooseRoom) {
                chooseRoomError.textContent = "Please choose a room.";
                document.getElementById("chooseRoom").style.borderColor = "red";
                return;
             }
-            if (!information) {
-               informationError.textContent = "Please provide important information.";
-               document.getElementById("information").style.borderColor = "red";
-               return;
-            }
-            if (!privacyPolicyChecked.checked) {
-               // If the checkbox is not checked, display an error message
-               privacyPolicyError.textContent = "Please read and accept the privacy policy.";
-               return;
-            }
+
             // Show loading status
             const submitBtn = document.getElementById("submitBtn");
             submitBtn.textContent = "submitting...";
